@@ -8,6 +8,8 @@ pipeline {
             var1 = '"bonjour"'
           }
           steps {
+            sh 'ls'
+            git(url: 'https://github.com/bkoj-arch/java_test', branch: 'main')
             echo 'hello phase de test'
             sh 'mvn clean test'
           }
@@ -32,7 +34,7 @@ pipeline {
 
     stage('end') {
       steps {
-        sh 'echo "Fin des taches, ca s\'est bien passé"'
+        sh 'echo "Fin des taches, ca s\'est bien passÃ©"'
       }
     }
 
