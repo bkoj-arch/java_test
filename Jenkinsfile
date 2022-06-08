@@ -8,7 +8,6 @@ pipeline {
             var1 = '"bonjour"'
           }
           steps {
-            deleteDir()
             sh 'touch bonjour'
             echo 'hello phase de test'
             sh 'mvn clean test'
