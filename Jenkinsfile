@@ -2,9 +2,6 @@ pipeline {
   agent any
   stages {
     stage('test') {
-      environment {
-        var1 = '"bonjour"'
-      }
       steps {
         sh 'touch bonjour'
         echo 'hello phase de test'
