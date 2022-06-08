@@ -8,8 +8,7 @@ pipeline {
             var1 = '"bonjour"'
           }
           steps {
-            sh 'ls'
-            git(url: 'https://github.com/bkoj-arch/java_test', branch: 'main')
+            sh 'touch bonjour'
             echo 'hello phase de test'
             sh 'mvn clean test'
           }
